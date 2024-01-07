@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Babydoll mai sone di</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .friend-card {
+      width: 200px;
+      margin: 20px;
+      padding: 15px;
+      background-color: #222;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Duniya Pittal Di gang</h1>
+  </header>
+
+  <main id="friend-container">
+    <!-- Friend cards will be dynamically added here -->
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const friendsData = [
+        { name: 'Archit', image: 'https://i.imgur.com/fyKq5db.jpg', introduction: 'The very cool one.' },
+        { name: 'Aarya', image: 'https://i.imgur.com/9bsTOUa.jpg', introduction: 'The craziest one.' },
+        { name: 'Awreya', image: 'https://i.imgur.com/xrUINe0.jpg', introduction: 'The sundar one.' },
+        { name: 'Atharv', image: 'https://i.imgur.com/mcqns2Q.jpg', introduction: 'The roast master.' },
+        { name: 'Anvay', image: 'https://i.imgur.com/OrXzboN.jpg', introduction: 'The SOBO feel wala.' },
+        { name: 'Aryaman', image: 'https://i.imgur.com/V0hFeaz.jpg', introduction: 'Literally the dumbest of all.' },
+        { name: 'Mugdha', image: 'https://i.imgur.com/Qe8iuS7.jpg', introduction: 'The one who can sleep anytime.' },
+        { name: 'Saksham', image: 'https://i.imgur.com/ZP1bCFR.jpg', introduction: 'Happie Happie Happie.' },
+        { name: 'Shreyash', image: 'https://i.imgur.com/Sf07B1C.jpg', introduction: 'The hushar one.' },
+        { name: 'Soham', image: 'https://i.imgur.com/LkO73hD.jpg', introduction: 'The funniest of all.' },
+        { name: 'Soumya', image: 'https://i.imgur.com/SM3rhQB.jpg', introduction: 'The very cool one.' },
+        { name: 'Vaidehi', image: 'https://i.imgur.com/lH2czT6.jpg', introduction: 'The chan one.' },
+        { name: 'Viren', image: 'https://i.imgur.com/xoNbpt7.jpg', introduction: 'The easygoing one.' },
+      ];
+
+      const friendContainer = document.getElementById('friend-container');
+
+      friendsData.forEach((friend) => {
+        const friendCard = document.createElement('div');
+        friendCard.classList.add('friend-card');
+
+        const image = document.createElement('img');
+        image.src = friend.image;
+        image.alt = friend.name
+
+        const name = document.createElement('h2');
+        name.textContent = friend.name;
+
+        const introduction = document.createElement('p');
+        introduction.textContent = friend.introduction;
+
+        friendCard.appendChild(image);
+        friendCard.appendChild(name);
+        friendCard.appendChild(introduction);
+
+        friendContainer.appendChild(friendCard);
+      });
+    });
+  </script>
+
+</body>
+</html>
